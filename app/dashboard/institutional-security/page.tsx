@@ -166,28 +166,28 @@ export default function InstitutionalSecurityDashboard() {
       title="Institutional Security"
       subtitle="Real-time threat protection and institutional-grade security monitoring"
     >
-      <div className="space-y-8">
+      <div className="space-y-6 sm:space-y-8">
         {/* Security Overview */}
-        <div className="grid grid-cols-7 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3 sm:gap-4">
           <Card className="bg-neutral-950 border-neutral-800 hover:border-neutral-700 transition-colors">
-            <CardContent className="p-4">
+            <CardContent className="p-3 sm:p-4">
               <div className="flex items-center justify-between mb-2">
                 <Shield className="w-4 h-4 text-neutral-400" />
-                <div className="text-xs text-neutral-500 font-mono">THREATS</div>
+                <div className="text-[10px] sm:text-xs text-neutral-500 font-mono">THREATS</div>
               </div>
-              <div className="text-2xl font-extralight text-white">{securityMetrics.threatsBlocked}</div>
-              <div className="text-xs text-neutral-400">blocked today</div>
+              <div className="text-xl sm:text-2xl font-extralight text-white">{securityMetrics.threatsBlocked}</div>
+              <div className="text-[10px] sm:text-xs text-neutral-400">blocked today</div>
             </CardContent>
           </Card>
 
           <Card className="bg-neutral-950 border-neutral-800 hover:border-neutral-700 transition-colors">
-            <CardContent className="p-4">
+            <CardContent className="p-3 sm:p-4">
               <div className="flex items-center justify-between mb-2">
                 <Target className="w-4 h-4 text-neutral-400" />
-                <div className="text-xs text-neutral-500 font-mono">SCORE</div>
+                <div className="text-[10px] sm:text-xs text-neutral-500 font-mono">SCORE</div>
               </div>
-              <div className="text-2xl font-extralight text-white">{securityMetrics.securityScore.toFixed(1)}</div>
-              <div className="flex items-center text-xs text-neutral-400">
+              <div className="text-xl sm:text-2xl font-extralight text-white">{securityMetrics.securityScore.toFixed(1)}</div>
+              <div className="flex items-center text-[10px] sm:text-xs text-neutral-400">
                 <ArrowUpRight className="w-3 h-3 mr-1" />
                 +0.3 today
               </div>
@@ -195,67 +195,67 @@ export default function InstitutionalSecurityDashboard() {
           </Card>
 
           <Card className="bg-neutral-950 border-neutral-800 hover:border-neutral-700 transition-colors">
-            <CardContent className="p-4">
+            <CardContent className="p-3 sm:p-4">
               <div className="flex items-center justify-between mb-2">
                 <Activity className="w-4 h-4 text-neutral-400" />
-                <div className="text-xs text-neutral-500 font-mono">UPTIME</div>
+                <div className="text-[10px] sm:text-xs text-neutral-500 font-mono">UPTIME</div>
               </div>
-              <div className="text-2xl font-extralight text-white">{securityMetrics.uptime}%</div>
-              <div className="text-xs text-neutral-400">365 days</div>
+              <div className="text-xl sm:text-2xl font-extralight text-white">{securityMetrics.uptime}%</div>
+              <div className="text-[10px] sm:text-xs text-neutral-400">365 days</div>
             </CardContent>
           </Card>
 
           <Card className="bg-neutral-950 border-neutral-800 hover:border-neutral-700 transition-colors">
-            <CardContent className="p-4">
+            <CardContent className="p-3 sm:p-4">
               <div className="flex items-center justify-between mb-2">
                 <Zap className="w-4 h-4 text-neutral-400" />
-                <div className="text-xs text-neutral-500 font-mono">RESPONSE</div>
+                <div className="text-[10px] sm:text-xs text-neutral-500 font-mono">RESPONSE</div>
               </div>
-              <div className="text-2xl font-extralight text-white">{securityMetrics.responseTime}ms</div>
-              <div className="text-xs text-neutral-400">avg response</div>
+              <div className="text-xl sm:text-2xl font-extralight text-white">{securityMetrics.responseTime}ms</div>
+              <div className="text-[10px] sm:text-xs text-neutral-400">avg response</div>
             </CardContent>
           </Card>
 
           <Card className="bg-neutral-950 border-neutral-800 hover:border-neutral-700 transition-colors">
-            <CardContent className="p-4">
+            <CardContent className="p-3 sm:p-4">
               <div className="flex items-center justify-between mb-2">
                 <Eye className="w-4 h-4 text-neutral-400" />
-                <div className="text-xs text-neutral-500 font-mono">SESSIONS</div>
+                <div className="text-[10px] sm:text-xs text-neutral-500 font-mono">SESSIONS</div>
               </div>
-              <div className="text-2xl font-extralight text-white">{securityMetrics.activeSessions}</div>
-              <div className="text-xs text-neutral-400">active</div>
+              <div className="text-xl sm:text-2xl font-extralight text-white">{securityMetrics.activeSessions}</div>
+              <div className="text-[10px] sm:text-xs text-neutral-400">active</div>
             </CardContent>
           </Card>
 
           <Card className="bg-neutral-950 border-neutral-800 hover:border-neutral-700 transition-colors">
-            <CardContent className="p-4">
+            <CardContent className="p-3 sm:p-4">
               <div className="flex items-center justify-between mb-2">
                 <CheckCircle className="w-4 h-4 text-neutral-400" />
-                <div className="text-xs text-neutral-500 font-mono">VULNS</div>
+                <div className="text-[10px] sm:text-xs text-neutral-500 font-mono">VULNS</div>
               </div>
-              <div className="text-2xl font-extralight text-white">{securityMetrics.vulnerabilities}</div>
-              <div className="text-xs text-neutral-400">detected</div>
+              <div className="text-xl sm:text-2xl font-extralight text-white">{securityMetrics.vulnerabilities}</div>
+              <div className="text-[10px] sm:text-xs text-neutral-400">detected</div>
             </CardContent>
           </Card>
 
-          <Card className="bg-neutral-950 border-neutral-800 hover:border-neutral-700 transition-colors">
-            <CardContent className="p-4">
+          <Card className="bg-neutral-950 border-neutral-800 hover:border-neutral-700 transition-colors col-span-2 sm:col-span-1">
+            <CardContent className="p-3 sm:p-4">
               <div className="flex items-center justify-between mb-2">
                 <Lock className="w-4 h-4 text-neutral-400" />
-                <div className="text-xs text-neutral-500 font-mono">CENTERS</div>
+                <div className="text-[10px] sm:text-xs text-neutral-500 font-mono">CENTERS</div>
               </div>
-              <div className="text-2xl font-extralight text-white">{securityMetrics.datacenters}</div>
-              <div className="text-xs text-neutral-400">operational</div>
+              <div className="text-xl sm:text-2xl font-extralight text-white">{securityMetrics.datacenters}</div>
+              <div className="text-[10px] sm:text-xs text-neutral-400">operational</div>
             </CardContent>
           </Card>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {/* Threat Monitor */}
           <Card className="bg-neutral-950 border-neutral-800">
             <CardHeader className="border-b border-neutral-900">
-              <CardTitle className="text-white font-light flex items-center">
-                <Shield className="w-5 h-5 mr-3 text-neutral-400" />
+              <CardTitle className="text-white font-light flex items-center text-sm sm:text-base">
+                <Shield className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 text-neutral-400" />
                 Live Threat Monitor
               </CardTitle>
             </CardHeader>
@@ -264,7 +264,7 @@ export default function InstitutionalSecurityDashboard() {
                 {threats.map((threat, index) => (
                   <div
                     key={threat.id}
-                    className={`p-6 border-b border-neutral-900 ${index === threats.length - 1 ? "border-b-0" : ""}`}
+                    className={`p-4 sm:p-6 border-b border-neutral-900 ${index === threats.length - 1 ? "border-b-0" : ""}`}
                   >
                     <div className="flex justify-between items-start mb-3">
                       <div className="flex items-center">
@@ -313,8 +313,8 @@ export default function InstitutionalSecurityDashboard() {
           {/* System Status */}
           <Card className="bg-neutral-950 border-neutral-800">
             <CardHeader className="border-b border-neutral-900">
-              <CardTitle className="text-white font-light flex items-center">
-                <Activity className="w-5 h-5 mr-3 text-neutral-400" />
+              <CardTitle className="text-white font-light flex items-center text-sm sm:text-base">
+                <Activity className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 text-neutral-400" />
                 System Status
               </CardTitle>
             </CardHeader>
@@ -323,7 +323,7 @@ export default function InstitutionalSecurityDashboard() {
                 {systemStatus.map((system, index) => (
                   <div
                     key={index}
-                    className={`p-6 border-b border-neutral-900 ${index === systemStatus.length - 1 ? "border-b-0" : ""}`}
+                    className={`p-4 sm:p-6 border-b border-neutral-900 ${index === systemStatus.length - 1 ? "border-b-0" : ""}`}
                   >
                     <div className="flex justify-between items-center mb-3">
                       <div className="flex items-center">
@@ -363,8 +363,8 @@ export default function InstitutionalSecurityDashboard() {
           {/* Real-time Events */}
           <Card className="bg-neutral-950 border-neutral-800">
             <CardHeader className="border-b border-neutral-900">
-              <CardTitle className="text-white font-light flex items-center">
-                <Eye className="w-5 h-5 mr-3 text-neutral-400" />
+              <CardTitle className="text-white font-light flex items-center text-sm sm:text-base">
+                <Eye className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 text-neutral-400" />
                 Real-time Events
               </CardTitle>
             </CardHeader>
@@ -398,56 +398,56 @@ export default function InstitutionalSecurityDashboard() {
         {/* Security Operations Center */}
         <Card className="bg-neutral-950 border-neutral-800">
           <CardHeader className="border-b border-neutral-900">
-            <CardTitle className="text-white font-light">Security Operations Center</CardTitle>
+            <CardTitle className="text-white font-light text-sm sm:text-base">Security Operations Center</CardTitle>
           </CardHeader>
-          <CardContent className="p-6">
-            <div className="bg-black p-6 rounded border border-neutral-900 font-mono text-sm space-y-4">
-              <div className="text-white font-light">PRISM-SOC DASHBOARD — LIVE STATUS</div>
+          <CardContent className="p-4 sm:p-6">
+            <div className="bg-black p-4 sm:p-6 rounded border border-neutral-900 font-mono text-xs sm:text-sm space-y-4">
+              <div className="text-white font-light text-xs sm:text-sm">PRISM-SOC DASHBOARD — LIVE STATUS</div>
               <div className="border-b border-neutral-800"></div>
 
-              <div className="grid md:grid-cols-4 gap-8 text-xs">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-[10px] sm:text-xs">
                 <div>
-                  <div className="text-neutral-400 mb-3 font-mono">THREAT MONITORING</div>
-                  <div className="text-neutral-300 space-y-2">
-                    <div>• Active threats blocked: {securityMetrics.threatsBlocked} (last 24h)</div>
-                    <div>• Suspicious login attempts: 23 (blocked)</div>
-                    <div>• DDoS attempts: 0 (last 7 days)</div>
-                    <div>• Malware signatures: 0 detected</div>
+                  <div className="text-neutral-400 mb-2 sm:mb-3 font-mono">THREAT MONITORING</div>
+                  <div className="text-neutral-300 space-y-1 sm:space-y-2">
+                    <div>• Blocked: {securityMetrics.threatsBlocked} (24h)</div>
+                    <div>• Suspicious logins: 23</div>
+                    <div>• DDoS attempts: 0</div>
+                    <div>• Malware: 0 detected</div>
                   </div>
                 </div>
                 <div>
-                  <div className="text-neutral-400 mb-3 font-mono">SYSTEM STATUS</div>
-                  <div className="text-neutral-300 space-y-2">
-                    <div>• Uptime: {securityMetrics.uptime}% (365 days)</div>
-                    <div>• Response time: {securityMetrics.responseTime}ms avg</div>
-                    <div>• Data centers: {securityMetrics.datacenters} active, 0 issues</div>
-                    <div>• Backup systems: 100% operational</div>
+                  <div className="text-neutral-400 mb-2 sm:mb-3 font-mono">SYSTEM STATUS</div>
+                  <div className="text-neutral-300 space-y-1 sm:space-y-2">
+                    <div>• Uptime: {securityMetrics.uptime}%</div>
+                    <div>• Response: {securityMetrics.responseTime}ms</div>
+                    <div>• Centers: {securityMetrics.datacenters} active</div>
+                    <div>• Backup: 100%</div>
                   </div>
                 </div>
                 <div>
-                  <div className="text-neutral-400 mb-3 font-mono">COMPLIANCE</div>
-                  <div className="text-neutral-300 space-y-2">
-                    <div>• SOC 2 Type II: Certified</div>
+                  <div className="text-neutral-400 mb-2 sm:mb-3 font-mono">COMPLIANCE</div>
+                  <div className="text-neutral-300 space-y-1 sm:space-y-2">
+                    <div>• SOC 2: Certified</div>
                     <div>• ISO 27001: Compliant</div>
-                    <div>• GDPR: Fully compliant</div>
-                    <div>• Last audit: {securityMetrics.lastAudit}</div>
+                    <div>• GDPR: Compliant</div>
+                    <div>• Audit: {securityMetrics.lastAudit}</div>
                   </div>
                 </div>
                 <div>
-                  <div className="text-neutral-400 mb-3 font-mono">PERFORMANCE</div>
-                  <div className="text-neutral-300 space-y-2">
-                    <div>• Security score: {securityMetrics.securityScore.toFixed(1)}/100</div>
-                    <div>• Vulnerabilities: {securityMetrics.vulnerabilities}</div>
-                    <div>• Incident response: {securityMetrics.incidentResponse}s avg</div>
-                    <div>• Active sessions: {securityMetrics.activeSessions}</div>
+                  <div className="text-neutral-400 mb-2 sm:mb-3 font-mono">PERFORMANCE</div>
+                  <div className="text-neutral-300 space-y-1 sm:space-y-2">
+                    <div>• Score: {securityMetrics.securityScore.toFixed(1)}/100</div>
+                    <div>• Vulns: {securityMetrics.vulnerabilities}</div>
+                    <div>• Response: {securityMetrics.incidentResponse}s</div>
+                    <div>• Sessions: {securityMetrics.activeSessions}</div>
                   </div>
                 </div>
               </div>
 
               <div className="border-t border-neutral-800 pt-4">
-                <div className="text-white">ALL SYSTEMS SECURE — THREAT PROTECTION ACTIVE</div>
-                <div className="text-neutral-500 text-xs font-mono mt-1">
-                  Last security scan: {new Date().toLocaleString()}
+                <div className="text-white text-xs sm:text-sm">ALL SYSTEMS SECURE</div>
+                <div className="text-neutral-500 text-[10px] sm:text-xs font-mono mt-1">
+                  Updated: {new Date().toLocaleString()}
                 </div>
               </div>
             </div>
@@ -455,31 +455,31 @@ export default function InstitutionalSecurityDashboard() {
         </Card>
 
         {/* Security Certifications */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
           <Card className="bg-neutral-950 border-neutral-800 text-center hover:border-neutral-700 transition-colors">
-            <CardContent className="p-8">
-              <Lock className="w-12 h-12 text-neutral-400 mx-auto mb-4" />
-              <h3 className="text-lg font-light text-white mb-2">SOC 2 TYPE II</h3>
-              <p className="text-neutral-400 text-sm mb-4">Security, availability, and confidentiality controls</p>
-              <Badge className="bg-white text-black font-mono">CERTIFIED</Badge>
+            <CardContent className="p-6 sm:p-8">
+              <Lock className="w-10 h-10 sm:w-12 sm:h-12 text-neutral-400 mx-auto mb-3 sm:mb-4" />
+              <h3 className="text-base sm:text-lg font-light text-white mb-2">SOC 2 TYPE II</h3>
+              <p className="text-neutral-400 text-xs sm:text-sm mb-3 sm:mb-4">Security, availability, and confidentiality</p>
+              <Badge className="bg-white text-black font-mono text-xs">CERTIFIED</Badge>
             </CardContent>
           </Card>
 
           <Card className="bg-neutral-950 border-neutral-800 text-center hover:border-neutral-700 transition-colors">
-            <CardContent className="p-8">
-              <Shield className="w-12 h-12 text-neutral-400 mx-auto mb-4" />
-              <h3 className="text-lg font-light text-white mb-2">ISO 27001</h3>
-              <p className="text-neutral-400 text-sm mb-4">Information security management systems</p>
-              <Badge className="bg-white text-black font-mono">CERTIFIED</Badge>
+            <CardContent className="p-6 sm:p-8">
+              <Shield className="w-10 h-10 sm:w-12 sm:h-12 text-neutral-400 mx-auto mb-3 sm:mb-4" />
+              <h3 className="text-base sm:text-lg font-light text-white mb-2">ISO 27001</h3>
+              <p className="text-neutral-400 text-xs sm:text-sm mb-3 sm:mb-4">Information security management</p>
+              <Badge className="bg-white text-black font-mono text-xs">CERTIFIED</Badge>
             </CardContent>
           </Card>
 
-          <Card className="bg-neutral-950 border-neutral-800 text-center hover:border-neutral-700 transition-colors">
-            <CardContent className="p-8">
-              <Eye className="w-12 h-12 text-neutral-400 mx-auto mb-4" />
-              <h3 className="text-lg font-light text-white mb-2">GDPR</h3>
-              <p className="text-neutral-400 text-sm mb-4">European data protection regulations</p>
-              <Badge className="bg-white text-black font-mono">COMPLIANT</Badge>
+          <Card className="bg-neutral-950 border-neutral-800 text-center hover:border-neutral-700 transition-colors sm:col-span-2 md:col-span-1">
+            <CardContent className="p-6 sm:p-8">
+              <Eye className="w-10 h-10 sm:w-12 sm:h-12 text-neutral-400 mx-auto mb-3 sm:mb-4" />
+              <h3 className="text-base sm:text-lg font-light text-white mb-2">GDPR</h3>
+              <p className="text-neutral-400 text-xs sm:text-sm mb-3 sm:mb-4">European data protection regulations</p>
+              <Badge className="bg-white text-black font-mono text-xs">COMPLIANT</Badge>
             </CardContent>
           </Card>
         </div>

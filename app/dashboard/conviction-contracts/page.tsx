@@ -141,17 +141,17 @@ export default function ConvictionContractsDashboard() {
       title="Conviction Contracts"
       subtitle="High-frequency belief trading with institutional-grade execution"
     >
-      <div className="space-y-8">
+      <div className="space-y-6 sm:space-y-8">
         {/* Trading Stats Bar */}
-        <div className="grid grid-cols-7 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3 sm:gap-4">
           <Card className="bg-neutral-950 border-neutral-800 hover:border-neutral-700 transition-colors">
-            <CardContent className="p-4">
+            <CardContent className="p-3 sm:p-4">
               <div className="flex items-center justify-between mb-2">
                 <Trophy className="w-4 h-4 text-neutral-400" />
-                <div className="text-xs text-neutral-500 font-mono">RANK</div>
+                <div className="text-[10px] sm:text-xs text-neutral-500 font-mono">RANK</div>
               </div>
-              <div className="text-2xl font-extralight text-white">#{rank}</div>
-              <div className="flex items-center text-xs text-neutral-400">
+              <div className="text-xl sm:text-2xl font-extralight text-white">#{rank}</div>
+              <div className="flex items-center text-[10px] sm:text-xs text-neutral-400">
                 <ArrowUpRight className="w-3 h-3 mr-1" />
                 +5 today
               </div>
@@ -159,26 +159,26 @@ export default function ConvictionContractsDashboard() {
           </Card>
 
           <Card className="bg-neutral-950 border-neutral-800 hover:border-neutral-700 transition-colors">
-            <CardContent className="p-4">
+            <CardContent className="p-3 sm:p-4">
               <div className="flex items-center justify-between mb-2">
                 <Flame className="w-4 h-4 text-neutral-400" />
-                <div className="text-xs text-neutral-500 font-mono">STREAK</div>
+                <div className="text-[10px] sm:text-xs text-neutral-500 font-mono">STREAK</div>
               </div>
-              <div className="text-2xl font-extralight text-white">{winStreak}</div>
-              <div className="text-xs text-neutral-400">wins in a row</div>
+              <div className="text-xl sm:text-2xl font-extralight text-white">{winStreak}</div>
+              <div className="text-[10px] sm:text-xs text-neutral-400">wins in a row</div>
             </CardContent>
           </Card>
 
           <Card className="bg-neutral-950 border-neutral-800 hover:border-neutral-700 transition-colors">
-            <CardContent className="p-4">
+            <CardContent className="p-3 sm:p-4">
               <div className="flex items-center justify-between mb-2">
                 <DollarSign className="w-4 h-4 text-neutral-400" />
-                <div className="text-xs text-neutral-500 font-mono">TODAY P&L</div>
+                <div className="text-[10px] sm:text-xs text-neutral-500 font-mono">TODAY P&L</div>
               </div>
-              <div className={`text-2xl font-extralight ${todaysPnL >= 0 ? "text-white" : "text-neutral-400"}`}>
+              <div className={`text-xl sm:text-2xl font-extralight ${todaysPnL >= 0 ? "text-white" : "text-neutral-400"}`}>
                 {todaysPnL >= 0 ? "+" : ""}${todaysPnL.toFixed(0)}
               </div>
-              <div className="flex items-center text-xs text-neutral-400">
+              <div className="flex items-center text-[10px] sm:text-xs text-neutral-400">
                 {todaysPnL >= 0 ? (
                   <ArrowUpRight className="w-3 h-3 mr-1" />
                 ) : (
@@ -190,53 +190,53 @@ export default function ConvictionContractsDashboard() {
           </Card>
 
           <Card className="bg-neutral-950 border-neutral-800 hover:border-neutral-700 transition-colors">
-            <CardContent className="p-4">
+            <CardContent className="p-3 sm:p-4">
               <div className="flex items-center justify-between mb-2">
                 <Target className="w-4 h-4 text-neutral-400" />
-                <div className="text-xs text-neutral-500 font-mono">WIN RATE</div>
+                <div className="text-[10px] sm:text-xs text-neutral-500 font-mono">WIN RATE</div>
               </div>
-              <div className="text-2xl font-extralight text-white">{winRate.toFixed(1)}%</div>
-              <div className="text-xs text-neutral-400">{totalTrades} trades</div>
+              <div className="text-xl sm:text-2xl font-extralight text-white">{winRate.toFixed(1)}%</div>
+              <div className="text-[10px] sm:text-xs text-neutral-400">{totalTrades} trades</div>
             </CardContent>
           </Card>
 
           <Card className="bg-neutral-950 border-neutral-800 hover:border-neutral-700 transition-colors">
-            <CardContent className="p-4">
+            <CardContent className="p-3 sm:p-4">
               <div className="flex items-center justify-between mb-2">
                 <TrendingUp className="w-4 h-4 text-neutral-400" />
-                <div className="text-xs text-neutral-500 font-mono">TOTAL P&L</div>
+                <div className="text-[10px] sm:text-xs text-neutral-500 font-mono">TOTAL P&L</div>
               </div>
-              <div className={`text-2xl font-extralight ${totalPnL >= 0 ? "text-white" : "text-neutral-400"}`}>
+              <div className={`text-xl sm:text-2xl font-extralight ${totalPnL >= 0 ? "text-white" : "text-neutral-400"}`}>
                 {totalPnL >= 0 ? "+" : ""}${totalPnL.toLocaleString()}
               </div>
-              <div className="text-xs text-neutral-400">unrealized</div>
+              <div className="text-[10px] sm:text-xs text-neutral-400">unrealized</div>
             </CardContent>
           </Card>
 
           <Card className="bg-neutral-950 border-neutral-800 hover:border-neutral-700 transition-colors">
-            <CardContent className="p-4">
+            <CardContent className="p-3 sm:p-4">
               <div className="flex items-center justify-between mb-2">
                 <Users className="w-4 h-4 text-neutral-400" />
-                <div className="text-xs text-neutral-500 font-mono">VOLUME</div>
+                <div className="text-[10px] sm:text-xs text-neutral-500 font-mono">VOLUME</div>
               </div>
-              <div className="text-2xl font-extralight text-white">${(totalVolume / 1000000).toFixed(1)}M</div>
-              <div className="text-xs text-neutral-400">24h</div>
+              <div className="text-xl sm:text-2xl font-extralight text-white">${(totalVolume / 1000000).toFixed(1)}M</div>
+              <div className="text-[10px] sm:text-xs text-neutral-400">24h</div>
             </CardContent>
           </Card>
 
-          <Card className="bg-neutral-950 border-neutral-800 hover:border-neutral-700 transition-colors">
-            <CardContent className="p-4">
+          <Card className="bg-neutral-950 border-neutral-800 hover:border-neutral-700 transition-colors col-span-2 sm:col-span-1">
+            <CardContent className="p-3 sm:p-4">
               <div className="flex items-center justify-between mb-2">
                 <Clock className="w-4 h-4 text-neutral-400" />
-                <div className="text-xs text-neutral-500 font-mono">ACTIVE</div>
+                <div className="text-[10px] sm:text-xs text-neutral-500 font-mono">ACTIVE</div>
               </div>
-              <div className="text-2xl font-extralight text-white">{contracts.length}</div>
-              <div className="text-xs text-neutral-400">positions</div>
+              <div className="text-xl sm:text-2xl font-extralight text-white">{contracts.length}</div>
+              <div className="text-[10px] sm:text-xs text-neutral-400">positions</div>
             </CardContent>
           </Card>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-8">
+        <div className="grid lg:grid-cols-5 gap-6 sm:gap-8">
           {/* Left Panel - Contract List */}
           <div className="lg:col-span-3">
             <Card className="bg-neutral-950 border-neutral-800">
@@ -248,30 +248,30 @@ export default function ConvictionContractsDashboard() {
                   {contracts.map((contract, index) => (
                     <div
                       key={contract.id}
-                      className={`p-6 border-b border-neutral-900 cursor-pointer transition-all hover:bg-neutral-900/50 ${
+                      className={`p-4 sm:p-6 border-b border-neutral-900 cursor-pointer transition-all hover:bg-neutral-900/50 ${
                         selectedContract.id === contract.id ? "bg-neutral-900 border-l-2 border-l-white" : ""
                       } ${index === contracts.length - 1 ? "border-b-0" : ""}`}
                       onClick={() => setSelectedContract(contract)}
                     >
-                      <div className="flex justify-between items-start mb-4">
+                      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-0 mb-4">
                         <div className="flex-1">
-                          <h3 className="font-light text-white text-sm mb-2">{contract.title}</h3>
-                          <div className="flex items-center gap-3">
+                          <h3 className="font-light text-white text-xs sm:text-sm mb-2">{contract.title}</h3>
+                          <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
                             <Badge
                               variant="outline"
-                              className="text-xs border-neutral-700 text-neutral-400 bg-transparent font-mono"
+                              className="text-[10px] sm:text-xs border-neutral-700 text-neutral-400 bg-transparent font-mono"
                             >
                               {contract.id}
                             </Badge>
-                            <Badge variant="outline" className="text-xs border-neutral-700 text-white bg-transparent">
+                            <Badge variant="outline" className="text-[10px] sm:text-xs border-neutral-700 text-white bg-transparent">
                               {contract.status.toUpperCase()}
                             </Badge>
                           </div>
                         </div>
-                        <div className="text-right">
-                          <div className="text-xl font-extralight text-white">${contract.currentPrice.toFixed(3)}</div>
+                        <div className="text-left sm:text-right">
+                          <div className="text-lg sm:text-xl font-extralight text-white">${contract.currentPrice.toFixed(3)}</div>
                           <div
-                            className={`text-xs font-mono flex items-center justify-end ${
+                            className={`text-[10px] sm:text-xs font-mono flex items-center sm:justify-end ${
                               contract.priceChange24h >= 0 ? "text-white" : "text-neutral-400"
                             }`}
                           >
@@ -285,7 +285,7 @@ export default function ConvictionContractsDashboard() {
                         </div>
                       </div>
 
-                      <div className="grid grid-cols-4 gap-4 text-xs">
+                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 text-[10px] sm:text-xs">
                         <div>
                           <span className="text-neutral-500 font-mono">POSITION</span>
                           <div className="font-light text-white">{contract.position.toLocaleString()}</div>
@@ -311,23 +311,23 @@ export default function ConvictionContractsDashboard() {
                           <span className="text-neutral-500 font-mono">MOMENTUM</span>
                           <div className="flex items-center">
                             <Progress value={contract.momentum * 100} className="h-1 bg-neutral-900 flex-1 mr-2" />
-                            <span className="text-white font-mono text-xs">{(contract.momentum * 100).toFixed(0)}</span>
+                            <span className="text-white font-mono text-[10px] sm:text-xs">{(contract.momentum * 100).toFixed(0)}</span>
                           </div>
                         </div>
                       </div>
 
-                      <div className="mt-4 grid grid-cols-3 gap-2">
-                        <div className="text-xs">
+                      <div className="mt-3 sm:mt-4 grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-2">
+                        <div className="text-[10px] sm:text-xs">
                           <span className="text-neutral-500 font-mono">VOLATILITY: </span>
                           <span className="text-white font-mono">
                             {(selectedContract.volatility * 100).toFixed(1)}%
                           </span>
                         </div>
-                        <div className="text-xs">
+                        <div className="text-[10px] sm:text-xs">
                           <span className="text-neutral-500 font-mono">LIQUIDITY: </span>
                           <span className="text-white font-mono">{(selectedContract.liquidity * 100).toFixed(0)}%</span>
                         </div>
-                        <div className="text-xs">
+                        <div className="text-[10px] sm:text-xs">
                           <span className="text-neutral-500 font-mono">EXPIRY: </span>
                           <span className="text-white font-mono">{contract.expiry}</span>
                         </div>
@@ -344,14 +344,14 @@ export default function ConvictionContractsDashboard() {
             {/* Quick Trade */}
             <Card className="bg-neutral-950 border-neutral-800">
               <CardHeader className="border-b border-neutral-900">
-                <CardTitle className="text-white font-light flex items-center">
-                  <Zap className="w-5 h-5 mr-3 text-neutral-400" />
+                <CardTitle className="text-white font-light flex items-center text-sm sm:text-base">
+                  <Zap className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 text-neutral-400" />
                   Quick Trade
                 </CardTitle>
               </CardHeader>
-              <CardContent className="p-6">
+              <CardContent className="p-4 sm:p-6">
                 <div className="space-y-4">
-                  <div className="text-sm text-neutral-400 font-mono">{selectedContract.title}</div>
+                  <div className="text-xs sm:text-sm text-neutral-400 font-mono truncate">{selectedContract.title}</div>
 
                   <Tabs value={orderType} onValueChange={setOrderType}>
                     <TabsList className="grid w-full grid-cols-2 bg-black border border-neutral-800">
@@ -395,7 +395,7 @@ export default function ConvictionContractsDashboard() {
                         <Button
                           variant="outline"
                           size="sm"
-                          className="border-neutral-800 text-neutral-400 hover:bg-neutral-900 font-light"
+                          className="border-neutral-800 text-neutral-400 hover:bg-neutral-900 font-light bg-transparent"
                           onClick={() => setOrderQuantity("1000")}
                         >
                           1K
@@ -403,7 +403,7 @@ export default function ConvictionContractsDashboard() {
                         <Button
                           variant="outline"
                           size="sm"
-                          className="border-neutral-800 text-neutral-400 hover:bg-neutral-900 font-light"
+                          className="border-neutral-800 text-neutral-400 hover:bg-neutral-900 font-light bg-transparent"
                           onClick={() => setOrderQuantity("5000")}
                         >
                           5K
@@ -411,7 +411,7 @@ export default function ConvictionContractsDashboard() {
                         <Button
                           variant="outline"
                           size="sm"
-                          className="border-neutral-800 text-neutral-400 hover:bg-neutral-900 font-light"
+                          className="border-neutral-800 text-neutral-400 hover:bg-neutral-900 font-light bg-transparent"
                           onClick={() => setOrderQuantity("10000")}
                         >
                           10K
@@ -453,7 +453,7 @@ export default function ConvictionContractsDashboard() {
                         <Button
                           variant="outline"
                           size="sm"
-                          className="border-neutral-800 text-neutral-400 hover:bg-neutral-900 font-light"
+                          className="border-neutral-800 text-neutral-400 hover:bg-neutral-900 font-light bg-transparent"
                           onClick={() => setOrderQuantity("1000")}
                         >
                           1K
@@ -461,7 +461,7 @@ export default function ConvictionContractsDashboard() {
                         <Button
                           variant="outline"
                           size="sm"
-                          className="border-neutral-800 text-neutral-400 hover:bg-neutral-900 font-light"
+                          className="border-neutral-800 text-neutral-400 hover:bg-neutral-900 font-light bg-transparent"
                           onClick={() => setOrderQuantity("5000")}
                         >
                           5K
@@ -469,7 +469,7 @@ export default function ConvictionContractsDashboard() {
                         <Button
                           variant="outline"
                           size="sm"
-                          className="border-neutral-800 text-neutral-400 hover:bg-neutral-900 font-light"
+                          className="border-neutral-800 text-neutral-400 hover:bg-neutral-900 font-light bg-transparent"
                           onClick={() => setOrderQuantity("10000")}
                         >
                           10K
@@ -532,9 +532,9 @@ export default function ConvictionContractsDashboard() {
             {/* Market Sentiment */}
             <Card className="bg-neutral-950 border-neutral-800">
               <CardHeader className="border-b border-neutral-900">
-                <CardTitle className="text-white font-light">Market Sentiment</CardTitle>
+                <CardTitle className="text-white font-light text-sm sm:text-base">Market Sentiment</CardTitle>
               </CardHeader>
-              <CardContent className="p-6">
+              <CardContent className="p-4 sm:p-6">
                 <div className="space-y-4">
                   <div>
                     <div className="flex justify-between text-xs mb-2">
@@ -568,23 +568,23 @@ export default function ConvictionContractsDashboard() {
         {/* Live Feed */}
         <Card className="bg-neutral-950 border-neutral-800">
           <CardHeader className="border-b border-neutral-900">
-            <CardTitle className="text-white font-light">Live Trading Feed</CardTitle>
+            <CardTitle className="text-white font-light text-sm sm:text-base">Live Trading Feed</CardTitle>
           </CardHeader>
-          <CardContent className="p-6">
-            <div className="bg-black p-6 rounded border border-neutral-900 font-mono text-sm space-y-2">
-              <div className="text-white font-light">CONVICTION CONTRACTS — LIVE EXECUTION FEED</div>
+          <CardContent className="p-4 sm:p-6">
+            <div className="bg-black p-4 sm:p-6 rounded border border-neutral-900 font-mono text-xs sm:text-sm space-y-2 overflow-x-auto">
+              <div className="text-white font-light text-xs sm:text-sm">CONVICTION CONTRACTS — LIVE EXECUTION FEED</div>
               <div className="border-b border-neutral-800"></div>
 
-              <div className="space-y-1 text-xs">
-                <div className="text-neutral-300">14:23:45 — USER_7834 BUY 2,500 BTC-100K @ $0.234 → +$127 P&L</div>
-                <div className="text-neutral-300">14:23:42 — USER_2901 SELL 1,000 TSLA-500 @ $0.671 → -$23 P&L</div>
-                <div className="text-neutral-300">14:23:38 — USER_5647 BUY 5,000 AGI-2030 @ $0.451 → +$289 P&L</div>
-                <div className="text-neutral-300">14:23:35 — USER_1203 BUY 3,200 BTC-100K @ $0.232 → +$156 P&L</div>
-                <div className="text-neutral-300">14:23:31 — USER_9876 SELL 800 TSLA-500 @ $0.669 → +$67 P&L</div>
+              <div className="space-y-1 text-[10px] sm:text-xs min-w-[300px]">
+                <div className="text-neutral-300">14:23:45 — BUY 2,500 BTC-100K @ $0.234 → +$127</div>
+                <div className="text-neutral-300">14:23:42 — SELL 1,000 TSLA-500 @ $0.671 → -$23</div>
+                <div className="text-neutral-300">14:23:38 — BUY 5,000 AGI-2030 @ $0.451 → +$289</div>
+                <div className="text-neutral-300">14:23:35 — BUY 3,200 BTC-100K @ $0.232 → +$156</div>
+                <div className="text-neutral-300">14:23:31 — SELL 800 TSLA-500 @ $0.669 → +$67</div>
               </div>
 
               <div className="border-t border-neutral-800 pt-2">
-                <div className="text-white">TOTAL VOLUME: $5.2M | ACTIVE TRADERS: 1,247 | AVG P&L: +$23.4</div>
+                <div className="text-white text-[10px] sm:text-xs">VOL: $5.2M | TRADERS: 1,247 | AVG P&L: +$23.4</div>
               </div>
             </div>
           </CardContent>
