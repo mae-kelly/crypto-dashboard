@@ -63,37 +63,37 @@ export function AutoSliderBanner() {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center px-4">
         {/* Status Indicator */}
-        <div className="absolute top-8 right-8 flex items-center space-x-4">
+        <div className="absolute top-4 right-4 sm:top-8 sm:right-8 flex items-center space-x-2 sm:space-x-4">
           <div className="flex items-center space-x-2">
             <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
             <span className="text-xs text-neutral-400 font-mono">LIVE</span>
           </div>
-          <Badge variant="outline" className="border-neutral-700 text-neutral-300 bg-black/50 backdrop-blur">
+          <Badge variant="outline" className="border-neutral-700 text-neutral-300 bg-black/50 backdrop-blur text-xs">
             OPERATIONAL
           </Badge>
         </div>
 
         {/* Main Content */}
-        <div className="text-center max-w-4xl">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight tracking-tight text-white mb-6">
+        <div className="text-center max-w-4xl px-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extralight tracking-tight text-white mb-4 sm:mb-6">
             The Future is Tradable
           </h1>
 
-          <p className="text-xl sm:text-2xl text-neutral-300 mb-4 font-light">
+          <p className="text-base sm:text-xl md:text-2xl text-neutral-300 mb-3 sm:mb-4 font-light">
             Revolutionary Conviction Trading Platform
           </p>
 
-          <p className="text-lg text-neutral-400 mb-8 max-w-2xl mx-auto font-light italic">
+          <p className="text-sm sm:text-lg text-neutral-400 mb-6 sm:mb-8 max-w-2xl mx-auto font-light italic">
             "Conviction isn't a thought. It's a trade."
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <Button
               onClick={handleDiscoverClick}
               size="lg"
-              className="bg-white text-black hover:bg-neutral-200 font-light tracking-wide px-8 py-4"
+              className="w-full sm:w-auto bg-white text-black hover:bg-neutral-200 font-light tracking-wide px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base"
             >
-              <ArrowUpRight className="w-5 h-5 mr-2" />
+              <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
               DISCOVER PRISM
             </Button>
 
@@ -101,30 +101,30 @@ export function AutoSliderBanner() {
               onClick={handleViewFeedClick}
               variant="outline"
               size="lg"
-              className="border-neutral-600 text-neutral-300 hover:bg-neutral-900 hover:text-white font-light px-8 py-4 bg-transparent"
+              className="w-full sm:w-auto border-neutral-600 text-neutral-300 hover:bg-neutral-900 hover:text-white font-light px-6 sm:px-8 py-3 sm:py-4 bg-transparent text-sm sm:text-base"
             >
-              <Activity className="w-5 h-5 mr-2" />
+              <Activity className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
               VIEW LIVE FEED
             </Button>
           </div>
         </div>
 
         {/* Bottom Stats */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-          <div className="flex items-center space-x-8 text-center">
+        <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 w-full px-4 sm:px-0 sm:w-auto">
+          <div className="flex items-center justify-center space-x-4 sm:space-x-8 text-center">
             <div>
-              <div className="text-2xl font-extralight text-white">$18.2B+</div>
-              <div className="text-xs text-neutral-400 font-mono">AUM</div>
+              <div className="text-lg sm:text-2xl font-extralight text-white">$18.2B+</div>
+              <div className="text-[10px] sm:text-xs text-neutral-400 font-mono">AUM</div>
             </div>
-            <div className="w-px h-8 bg-neutral-700"></div>
+            <div className="w-px h-6 sm:h-8 bg-neutral-700"></div>
             <div>
-              <div className="text-2xl font-extralight text-white">10K+</div>
-              <div className="text-xs text-neutral-400 font-mono">INVESTORS</div>
+              <div className="text-lg sm:text-2xl font-extralight text-white">10K+</div>
+              <div className="text-[10px] sm:text-xs text-neutral-400 font-mono">INVESTORS</div>
             </div>
-            <div className="w-px h-8 bg-neutral-700"></div>
+            <div className="w-px h-6 sm:h-8 bg-neutral-700"></div>
             <div>
-              <div className="text-2xl font-extralight text-white">99.99%</div>
-              <div className="text-xs text-neutral-400 font-mono">UPTIME</div>
+              <div className="text-lg sm:text-2xl font-extralight text-white">99.99%</div>
+              <div className="text-[10px] sm:text-xs text-neutral-400 font-mono">UPTIME</div>
             </div>
           </div>
         </div>
